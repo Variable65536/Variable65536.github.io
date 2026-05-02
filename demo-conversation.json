@@ -1,0 +1,146 @@
+[
+  {
+    "table": "conversations",
+    "rows": [
+      {
+        "id": "conv-1734086746930",
+        "lastModified": 1734087548943,
+        "currNode": 1755372088111,
+        "name": "Technical Demo"
+      },
+      {
+        "id": "conv-1755434548305",
+        "lastModified": 1755434612931,
+        "currNode": 1755434588923,
+        "name": "Write some code"
+      }
+    ]
+  },
+  {
+    "table": "messages",
+    "rows": [
+      {
+        "id": 1734086746930,
+        "convId": "conv-1734086746930",
+        "type": "root",
+        "timestamp": 1734086746930,
+        "role": "system",
+        "content": "",
+        "parent": -1,
+        "children": [1734086764521, 1734087548328]
+      },
+      {
+        "id": 1734086764521,
+        "timestamp": 1734086764521,
+        "type": "text",
+        "convId": "conv-1734086746930",
+        "role": "user",
+        "content": "A LaTeX block demo conversation",
+        "parent": 1734086746930,
+        "children": [1734087548327]
+      },
+      {
+        "id": 1734087548327,
+        "timestamp": 1734087548327,
+        "type": "text",
+        "convId": "conv-1734086746930",
+        "model": "gpt-3.5-turbo",
+        "role": "assistant",
+        "content": "This is the formula:\n\n$\\frac{e^{x_i}}{\\sum_{j=1}^{n}e^{x_j}}$\n\nGiven an input vector \\(\\mathbf{x} = [x_1, x_2, \\ldots, x_n]\\)\n\n\\[\ny_i = \\frac{e^{x_i}}{\\sum_{j=1}^n e^{x_j}}\n\\]\n\n$2x + y = z$\n\nCode block latex:\n```latex\n\\frac{e^{x_i}}{\\sum_{j=1}^{n}e^{x_j}}\n```\n\nTest dollar sign: $1234 $4567\n\nInvalid latex syntax: $E = mc^$ and $$E = mc^$$",
+        "parent": 1734086764521,
+        "children": [],
+        "timings": {
+          "prompt_n": 1,
+          "prompt_ms": 28.923,
+          "predicted_n": 25,
+          "predicted_ms": 573.016
+        }
+      },
+      {
+        "id": 1734087548328,
+        "timestamp": 1734087548328,
+        "type": "text",
+        "convId": "conv-1734086746930",
+        "role": "user",
+        "content": "A code block demo conversation",
+        "parent": 1734086746930,
+        "children": [1734087548329]
+      },
+      {
+        "id": 1734087548329,
+        "timestamp": 1734087548329,
+        "type": "text",
+        "convId": "conv-1734086746930",
+        "model": "gpt-3.5-turbo",
+        "role": "assistant",
+        "content": "Code block:\n```js\nconsole.log('hello world')\n```\n```sh\nls -la /dev\n```",
+        "parent": 1734087548328,
+        "children": []
+      },
+      {
+        "id": 1755434548305,
+        "convId": "conv-1755434548305",
+        "type": "root",
+        "timestamp": 1755434548305,
+        "role": "system",
+        "content": "",
+        "parent": -1,
+        "children": [1755434548311]
+      },
+      {
+        "id": 1755434548311,
+        "timestamp": 1755434548311,
+        "type": "text",
+        "convId": "conv-1755434548305",
+        "role": "user",
+        "content": "Write some code",
+        "parent": 1755434548305,
+        "children": [1755434548339]
+      },
+      {
+        "id": 1755434548339,
+        "convId": "conv-1755434548305",
+        "type": "text",
+        "timestamp": 1755434548339,
+        "role": "assistant",
+        "content": "Sure thing! Could you let me know what you’d like the code to do?  \n- What programming language are you interested in?  \n- Is it a small utility (e.g., “Hello, World!”), a particular algorithm, a web‑app snippet, or something else?  \nWith a bit more detail I can tailor the code to your needs.",
+        "parent": 1755434548311,
+        "children": [1755434588899],
+        "model": "ChatGPT",
+        "timings": {
+          "prompt_n": 6,
+          "prompt_ms": 107.249,
+          "predicted_n": 288,
+          "predicted_ms": 6605.578
+        }
+      },
+      {
+        "id": 1755434588899,
+        "timestamp": 1755434588899,
+        "type": "text",
+        "convId": "conv-1755434548305",
+        "role": "user",
+        "content": "Write examples on different languages. \"Hello World\" would be enough.",
+        "parent": 1755434548339,
+        "children": [1755434588923]
+      },
+      {
+        "id": 1755434588923,
+        "convId": "conv-1755434548305",
+        "type": "text",
+        "timestamp": 1755434588923,
+        "role": "assistant",
+        "content": "Below are tiny “Hello World” programs written in a handful of popular programming languages.  \nFeel free to copy, paste, and run them in the language’s standard interpreter/compiler.  \nI’ve included a short comment for each to point out the entry‑point or the trick that makes it “Hello World” work.\n\n---\n\n### 1. **Python 3**\n\n```python\n# hello.py\nprint(\"Hello, World!\")\n```\n\nRun with: `python3 hello.py`\n\n---\n\n### 2. **JavaScript (Node.js)**\n\n```js\n// hello.js\nconsole.log(\"Hello, World!\");\n```\n\nRun with: `node hello.js`\n\n---\n\n### 3. **Java (Java 17)**\n\n```java\n// HelloWorld.java\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n```\n\nCompile: `javac HelloWorld.java`  \nRun: `java HelloWorld`\n\n---\n\n### 4. **C (C99)**\n\n```c\n/* hello.c */\n#include <stdio.h>\n\nint main(void) {\n    puts(\"Hello, World!\");\n    return 0;\n}\n```\n\nCompile: `gcc -std=c99 hello.c -o hello`  \nRun: `./hello`\n\n---\n\n### 5. **C++ (C++17)**\n\n```cpp\n// hello.cpp\n#include <iostream>\n\nint main() {\n    std::cout << \"Hello, World!\" << '\\n';\n    return 0;\n}\n```\n\nCompile: `g++ -std=c++17 hello.cpp -o hello`  \nRun: `./hello`\n\n---\n\n### 6. **C# (.NET 8)**\n\n```csharp\n// Program.cs\nusing System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine(\"Hello, World!\");\n    }\n}\n```\n\nCompile: `dotnet new console -n HelloWorld -o . --no-restore`  \nRun: `dotnet run`\n\n---\n\n### 7. **Go (Go 1.22)**\n\n```go\n// hello.go\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n```\n\nRun: `go run hello.go`\n\n---\n\n### 8. **Rust (Rust 1.78)**\n\n```rust\n// main.rs\nfn main() {\n    println!(\"Hello, World!\");\n}\n```\n\nRun: `cargo run --quiet` (or `rustc main.rs && ./main`)\n\n---\n\n### 9. **Ruby (Ruby 3.2)**\n\n```ruby\n# hello.rb\nputs \"Hello, World!\"\n```\n\nRun: `ruby hello.rb`\n\n---\n\n### 10. **PHP (PHP 8.3)**\n\n```php\n<?php\n// hello.php\necho \"Hello, World!\\n\";\n```\n\nRun: `php hello.php`\n\n---\n\n### 11. **Swift (Swift 5.9)**\n\n```swift\n// main.swift\nimport Foundation\n\nprint(\"Hello, World!\")\n```\n\nRun: `swift main.swift`\n\n---\n\n### 12. **Kotlin (Kotlin 1.9)**\n\n```kotlin\n// Main.kt\nfun main() = println(\"Hello, World!\")\n```\n\nRun: `kotlinc Main.kt -include-runtime -d main.jar && java -jar main.jar`\n\n---\n\n### 13. **Shell (Bash)**\n\n```bash\n# hello.sh\necho \"Hello, World!\"\n```\n\nRun: `bash hello.sh`\n\n---\n\n### 14. **SQL (SQLite)**\n\n```sql\n-- hello.sql\nSELECT 'Hello, World!' AS greeting;\n```\n\nRun with SQLite: `sqlite3 < hello.sql`\n\n---\n\n### 15. **Assembly (x86‑64, NASM)**\n\n```asm\n; hello.asm\nsection .data\n    msg db 'Hello, World!', 0x0A\n    len equ $ - msg\n\nsection .text\n    global _start\n\n_start:\n    mov     eax, 1          ; sys_write\n    mov     edi, 1          ; stdout\n    mov     rsi, msg\n    mov     edx, len\n    syscall\n\n    mov     eax, 60         ; sys_exit\n    xor     edi, edi\n    syscall\n```\n\nCompile: `nasm -felf64 hello.asm && ld hello.o -o hello`  \nRun: `./hello`\n\n---\n\nThat should cover a wide spectrum of runtimes and compilers. Happy coding!",
+        "parent": 1755434588899,
+        "children": [],
+        "model": "ChatGPT",
+        "timings": {
+          "prompt_n": 103,
+          "prompt_ms": 148.68,
+          "predicted_n": 1020,
+          "predicted_ms": 23754.774
+        }
+      }
+    ]
+  }
+]
